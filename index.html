@@ -1,67 +1,430 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Twtihtu | Homepage</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            background: #0f172a;
-            color: #e2e8f0;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-        .container {
-            text-align: center;
-            max-width: 600px;
-        }
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 16px;
-            background: linear-gradient(90deg,#38bdf8,#a855f7);
-            -webkit-background-clip: text;
-            color: transparent;
-        }
-        p {
-            color:#94a3b8;
-            font-size:1.1rem;
-            margin-bottom:32px;
-            line-height:1.7;
-        }
-        .links a{
-            display:inline-block;
-            text-decoration:none;
-            color:#38bdf8;
-            border:1px solid #38bdf8;
-            padding:10px 24px;
-            border-radius:999px;
-            margin:8px;
-            transition:0.3s;
-        }
-        .links a:hover{
-            background:#38bdf8;
-            color:#0f172a;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>TWtihtu | Personal Website</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+    color:#222;
+    background:#f5f5f7;
+}
+
+
+/* 导航 */
+
+nav{
+
+    position:fixed;
+    top:0;
+    width:100%;
+
+    background:rgba(255,255,255,.85);
+
+    backdrop-filter:blur(15px);
+
+    padding:18px 40px;
+
+    display:flex;
+    justify-content:space-between;
+
+    z-index:10;
+
+}
+
+
+.logo{
+
+    font-size:22px;
+    font-weight:700;
+
+}
+
+
+nav a{
+
+    text-decoration:none;
+
+    color:#333;
+
+    margin-left:25px;
+
+}
+
+
+
+/* 首页 */
+
+.hero{
+
+    height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:20px;
+
+}
+
+
+.hero h1{
+
+    font-size:70px;
+
+    margin-bottom:20px;
+
+}
+
+
+.hero p{
+
+    font-size:22px;
+
+    color:#666;
+
+}
+
+
+.btn{
+
+    margin-top:35px;
+
+}
+
+
+.btn a{
+
+    display:inline-block;
+
+    padding:14px 35px;
+
+    border-radius:30px;
+
+    background:#0071e3;
+
+    color:white;
+
+    text-decoration:none;
+
+}
+
+
+
+/* 内容 */
+
+section{
+
+    padding:80px 10%;
+
+}
+
+
+.title{
+
+    text-align:center;
+
+    font-size:40px;
+
+    margin-bottom:50px;
+
+}
+
+
+
+/* 卡片 */
+
+
+.cards{
+
+    display:flex;
+
+    gap:30px;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+.card{
+
+    background:white;
+
+    width:300px;
+
+    padding:30px;
+
+    border-radius:25px;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.08);
+
+}
+
+
+.card h3{
+
+    margin-bottom:15px;
+
+}
+
+
+
+.card p{
+
+    color:#666;
+
+}
+
+
+
+/* 页脚 */
+
+
+footer{
+
+    background:#111;
+
+    color:white;
+
+    text-align:center;
+
+    padding:40px;
+
+}
+
+
+
+/* 手机适配 */
+
+@media(max-width:700px){
+
+.hero h1{
+
+font-size:45px;
+
+}
+
+nav{
+
+padding:15px;
+
+}
+
+}
+
+</style>
+
 </head>
+
+
 <body>
-    <div class="container">
-        <h1>Hi, I'm twtihtu</h1>
-        <p>欢迎来到我的个人主页 | My Github Homepage</p>
-        <div class="links">
-            <a href="https://github.com/twtihtu" target="_blank">Github主页</a>
-            <!-- 后续可以在这里添加博客、项目链接 -->
-        </div>
-    </div>
+
+
+<nav>
+
+<div class="logo">
+TWtihtu
+</div>
+
+
+<div>
+
+<a href="#about">
+关于
+</a>
+
+<a href="#projects">
+项目
+</a>
+
+<a href="#contact">
+联系
+</a>
+
+</div>
+
+
+</nav>
+
+
+
+
+<div class="hero">
+
+
+<h1>
+Hello, I'm TWtihtu
+</h1>
+
+
+<p>
+探索技术 · 分享知识 · 创建价值
+</p>
+
+
+<div class="btn">
+
+<a href="#about">
+了解更多
+</a>
+
+</div>
+
+
+</div>
+
+
+
+
+
+<section id="about">
+
+
+<h2 class="title">
+关于我
+</h2>
+
+
+<p style="text-align:center;font-size:18px;color:#666">
+
+欢迎来到我的个人网站。<br>
+这里记录我的学习、项目和想法。
+
+</p>
+
+
+</section>
+
+
+
+
+
+
+<section id="projects">
+
+
+<h2 class="title">
+项目
+</h2>
+
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<h3>
+🌐 个人网站
+</h3>
+
+<p>
+基于 GitHub Pages 创建的个人主页。
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+💻 技术学习
+</h3>
+
+<p>
+记录编程、网络和各种技术探索。
+</p>
+
+</div>
+
+
+
+
+<div class="card">
+
+<h3>
+📚 知识分享
+</h3>
+
+<p>
+整理有价值的信息和资料。
+</p>
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<section id="contact">
+
+
+<h2 class="title">
+联系
+</h2>
+
+
+<p style="text-align:center">
+
+GitHub:
+<br>
+
+<a href="https://github.com/twtihtu">
+github.com/twtihtu
+</a>
+
+</p>
+
+
+</section>
+
+
+
+
+<footer>
+
+© 2026 TWtihtu
+<br>
+Powered by GitHub Pages
+
+</footer>
+
+
+
 </body>
+
 </html>
